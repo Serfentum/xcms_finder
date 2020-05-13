@@ -7,7 +7,7 @@ but it hasn't packaged releases. Because of this, I've created this repository -
 small tool for obtaining xcms library of relevant version.
 
 If you know easier way to get xcms of arbitraty obsolete version, please
-let me [know](@tetpapx@bk.ru). Because at least I and my friends don't know about it
+let me [know](mailto:tetpapx@bk.ru). Because at least I and my friends don't know about it
 
 
 # todo
