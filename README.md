@@ -12,77 +12,78 @@ let me [know](mailto:tetpapx@bk.ru). Because at least I and my friends don't kno
 
 # todo
 * finish readme writing
-* add cli
 * pack it into module
+* wite installing part of README
 
 
 # Getting Started
+To get a copy of xcms_finder you just need to
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+`git clone https://github.com/Serfentum/xcms_finder.git`
+
+After that you can use xcms_finder
+* from its folder
+* from anywhere with specifying path to it
+* from anywhere just by xcms_finder if you add it to PATH or create a proper symlink
+
 
 # Prerequisites
+You need these things to runn xcms_finder
 
-What things you need to install the software and how to install them
+> python >= 3.6
+> [gitpython](https://github.com/gitpython-developers/GitPython) >= 3.1.2 -
+older versions could be ok, but I'm not sure
 
-```
-Give examples
-```
 
 # Installing
+todo
 
-A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+# Usage
+`xcms_finder.py -p path -v version`
+or
+`python xcms_finder.py -p path -v version`
+where
+* `xcms_finder.py` - name of our program
+* `path` - path on your computer where the xcms repository will be stored
+* `version` - valid xcms version like 2.99.6 or 3.0.0
+* `python` - just your python =)
 
+Also you can specify xcms repo url, but it points to xcms repo - change is unlikely
+
+After that you'll see list of passing versions until program will hit specified version, or you'll face an error
+If you have an error and there is no answer about it in my repository, please [write to me about it](mailto:tetpapx@bk.ru)
+
+After normal work you'll find tar.gz archive with desired xcms version in the specified by path directory
+
+## What to do next?
+Usually you need tar.gz of R package to install it on R locally (in case of xcms there is no other variants
+to get noncommon version)
+So your future steps probably will be
+
+`R CMD INSTALL path_to_xcms.tar.gz`
+where
+* `R` - your R
+* `CMD INSTALL` - command to install package
+* `path_to_xcms.tar.gz` - path to tar.gz of xcms obtained in previous step
+
+Or you can do it inside R
+```R
+> install.packages('path_to_xcms.tar.gz')
 ```
-Give the example
-```
 
-And repeat
+But it could be just a start of your sufferings - you will need xcms dependencies.
+List of them will be shown to you if xcms installation failed and you can
+install them via bioconductor. Though there is a possibility that old xcms
+need old dependencies' versions - it depends on their backward compatability
+In this case you'll need to install special versions of dependencies first
 
-```
-until finished
-```
+Good luck!
 
-End with an example of getting some data out of the system or using it for a little demo
-
-# Running the tests
-
-Explain how to run the automated tests for this system
-
-# Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-# And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-# Deployment
-
-Add additional notes about how to deploy this on a live system
-
-# Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-# Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 # Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 # Authors
 
