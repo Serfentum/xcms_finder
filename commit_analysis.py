@@ -51,7 +51,3 @@ if __name__ == '__main__':
                 local_repo=local_repo,
                 version=version,
                 branch='master')
-    
-    
-    # # Load from filesystem
-    # repo = git.Repo(local_repo)
